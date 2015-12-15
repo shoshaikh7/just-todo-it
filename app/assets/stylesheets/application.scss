@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+  body {
+    // background-color: #333333;
+  }
+
+  #main-header {
+    height: 25em;
+    text-align: center;
+  }
+
+  #main-header h1, h3{
+    opacity: 0.8;
+  }
+
+  .todo-lists {
+    width: 35em;
+    border: 2px solid rgb(217, 217, 217);
+    border-radius: 7px;
+    margin: 1.5em 2.3em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(246, 245, 245);
+  }
+
+  .new-form {
+    border: 2px solid rgb(217, 217, 217);
+    border-radius: 7px;
+    padding: 1em;
+    background-color: rgb(240, 240, 240);
+  }
+
+  .form-label {
+    font-size: 18px;
+  }
+  .new-btn {
+    width: 100%;
+    align-self: center;
+  }
+
+  .todo_list {
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    margin-top: 2em;
+    padding: 1em;
+  }
+
+  .todo_list .todo_list_title {
+    text-align: center;
+  }
+
+  .todo_list .todo_list_sub_title {
+    text-align: center;
+  }
+
+  .todo_item {
+    font-size: 25px;
+    display: inline-block;
+  }
+
+  .complete {
+    display: inline-block;
+  }
+
+  .delete {
+    display: inline-block;
+  }
+
+  .todo_list_title a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+  }
+
+  .todo_list_title {
+    text-align: center;
+  }
+
+  .todo-lists h4 {
+    opacity: 0.6;
+  }
+
+  .links {
+    text-align: center;
+    clear: both;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }

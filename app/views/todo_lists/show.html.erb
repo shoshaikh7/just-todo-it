@@ -1,21 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="container col-md-6 col-md-offset-3 todo_list">
+  <p id="notice"><%= notice %></p>
+  <h1 class="todo_list_title"><%= @todo_list.title %></h1>
+  <h3 class="todo_list_sub_title"><%= @todo_list.description %></h3><hr>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
+  <div id="todo_items_wrapper" class="col-md-10 col-md-offset-1">
+    <%= render @todo_list.todo_items %>
+    <div id="form">
+      <%= render "todo_items/form" %>
+    </div>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @todo_list.description %>
-</p>
+  <div class="links">
+    <%= button_tag "Edit", :type => 'button', :class => "btn btn-info links", :onclick => "location.href = '#{edit_todo_list_path(@todo_list)}'" %>
+    <%= button_tag "Delete", :type => 'button', :class => "btn btn-danger links", :method => :delete, :action => 'destroy', :onclick => "location.href = '#{todo_list_path(@todo_list)}'" %>
+    <%= button_tag "Back", :type => 'button', :class => "btn btn-warning links", :onclick => "location.href = '#{todo_lists_path}'" %>
 
-<div id="todo_items_wrapper">
-  <%= render @todo_list.todo_items %>
-  <div id="form">
-    <%= render "todo_items/form" %>
   </div>
 </div>
-
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>

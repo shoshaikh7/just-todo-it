@@ -10,16 +10,18 @@
       </ul>
     </div>
   <% end %>
+  <div class="new-form col-md-4 col-md-offset-4">
+    <div class="form-group ">
+      <%= f.label :title, class: "form-label" %><br>
+      <%= f.text_field :title, class: "form-control"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :description, class: "form-label" %><br>
+      <%= f.text_area :description, class: "form-control"%>
+    </div>
+    <div>
+      <%= f.submit "Submit", class: "btn btn-success new-btn btn-lg"%>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
